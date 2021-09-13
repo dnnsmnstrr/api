@@ -12,7 +12,7 @@ const redirects = [
   {
     name: 'homepage',
     url: DEFAULT_URL, //required to override default behaviour
-    aliases: ['home', 'main', 'root']
+    aliases: ['home', 'main', 'root', 'landing']
   },
   {
     name: 'contact',
@@ -69,6 +69,10 @@ const redirects = [
     aliases: ['zk', 'zettel', 'notes', 'slipbox', 'knowlege']
   },
   {
+    name: 'dendron',
+    url: 'https://dnnsmnstrr.gitlab.io/zettelkasten
+  },
+  {
     name: 'dotfiles',
     aliases: ['df', 'setup', 'dot', 'config']
   },
@@ -119,6 +123,11 @@ const redirects = [
     name: 'telegram',
     url: 'https://t.me/' + USERNAME_SHORT,
     aliases: ['tg', 'tele']
+  },
+  {
+    name: 'stack',
+    url: 'https://yourstack.com/@' + USERNAME_SHORT,
+    aliases: ['yourstack', 'ys']
   },
   { name: 'stickers', url: 'https://t.me/addstickers/memesterer' },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
