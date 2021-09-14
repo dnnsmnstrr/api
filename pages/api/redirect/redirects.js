@@ -70,7 +70,7 @@ const redirects = [
   },
   {
     name: 'dendron',
-    url: 'https://dnnsmnstrr.gitlab.io/zettelkasten
+    url: 'https://dnnsmnstrr.gitlab.io/zettelkasten'
   },
   {
     name: 'dotfiles',
