@@ -13,12 +13,15 @@ var randomProperty = function (obj) {
 
 export default async (type) => {
   const playlists = await getPlaylists()
-  if (type === 'random' && playlists) {
+  if (type === 'list') {
+    return playlists
+  }
+  if (type === 'random' && playlists)    {
     return randomProperty(playlists)
   }
   if (type && playlists[type]) {
     return playlists[type]
-  } else {
-    return playlists['current']
-  }
+  } 
+  return playlists['current']
+  
 }
