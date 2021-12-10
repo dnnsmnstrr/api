@@ -11,18 +11,20 @@ import {
 const redirects = [
   {
     name: 'homepage',
+    description: 'My Homepage, hosted on GitHub Pages',
     url: DEFAULT_URL, //required to override default behaviour
     aliases: ['home', 'main', 'root', 'landing']
   },
   {
     name: 'contact',
+    description: 'Send me an email',
     url: 'mailto:' + EMAIL,
     aliases: ['email', 'message', 'mail']
   },
   {
     name: 'github',
     url: 'https://www.github.com/' + USERNAME_SHORT,
-    aliases: ['gh', 'git', 'hub', 'code', 'repo', 'hack']
+    aliases: ['g', 'gh', 'git', 'hub', 'code', 'repo', 'hack']
   },
   {
     name: 'gitlab',
@@ -31,60 +33,72 @@ const redirects = [
   },
   {
     name: 'spotify',
+    description: 'Music is Life!',
     url: 'https://open.spotify.com/user/' + USERNAME,
-    aliases: ['music', 'sp', 'spot',]
+    aliases: ['s', 'sp', 'spot', 'music']
   },
   {
     name: 'instagram',
     url: 'https://www.instagram.com/' + USERNAME_SHORT,
-    aliases: ['insta', 'gram', 'ig', 'nofilter', 'pictures', 'photos', 'stories']
+    aliases: ['i', 'ig', 'insta', 'gram', 'nofilter', 'pictures', 'photos', 'stories']
   },
   {
     name: 'twitter',
     url: 'https://twitter.com/' + USERNAME_SHORT,
-    aliases: ['tw', 'tweet', 'tweets']
+    aliases: ['t', 'tw', 'tweet', 'tweets', 'hashtag']
   },
   {
     name: 'facebook',
     url: 'https://facebook.com/' + USERNAME,
-    aliases: ['fb', 'book', 'gesichtsbuch']
+    aliases: ['f', 'fb', 'book', 'gesichtsbuch', 'meta']
+  },
+  { 
+    name: 'reddit', 
+    url: 'https://www.reddit.com/user/themissing_link',
+    aliases: ['r', 'readit', 'neckbeard']
   },
   {
     name: 'linkedin',
     url: 'https://www.linkedin.com/in/' + USERNAME,
-    aliases: ['in', 'linked']
+    aliases: ['l', 'in', 'linked']
   },
   {
     name: 'paypal',
     url: 'https://www.paypal.com/paypalme/' + USERNAME,
-    aliases: ['pp', 'pay', 'donate', 'sendmoney', 'wheremymoneyat']
+    aliases: ['p', 'pp', 'pay', 'donate', 'sendmoney', 'wheremymoneyat']
   },
   {
     name: 'youtube',
     url: 'https://www.youtube.com/user/' + USERNAME,
-    aliases: ['yt', 'tube', 'videos']
+    aliases: ['y', 'yt', 'tube', 'videos', 'watch']
   },
   {
     name: 'zettelkasten',
-    aliases: ['zk', 'zettel', 'notes', 'slipbox', 'knowlege']
+    aliases: ['z', 'n', 'zk', 'zettel', 'notes', 'slipbox', 'knowlege']
   },
   {
     name: 'dendron',
+    description: 'An alternate deployment of my notes, using dendron',
     url: 'https://dnnsmnstrr.gitlab.io/zettelkasten'
   },
   {
     name: 'dotfiles',
-    aliases: ['df', 'setup', 'dot', 'config']
+    aliases: ['d', 'df', 'setup', 'dot', 'config']
   },
   {
     name: 'making',
     url: 'https://www.tiktok.com/@dennis.makerer',
-    aliases: ['makerer', 'make', 'maker', 'tiktok', 'tt', 'makermonday']
+    aliases: ['makerer', 'make', 'maker', 'makermonday']
+  },
+  {
+    name: 'tiktok',
+    url: 'https://www.tiktok.com/@dnnsmnstrr',
+    aliases: ['tt']
   },
   {
     name: 'toolshare',
     url: 'https://toolsharewith.me',
-    aliases: ['tools', 'tool']
+    aliases: ['tool', 'tools']
   },
   {
     name: 'universe',
@@ -93,7 +107,12 @@ const redirects = [
   {
     name: 'felix',
     url: 'https://fm-branding.de/',
-    aliases: ['lancemax', 'brother', 'dumbass']
+    aliases: ['fdp', 'dumbass']
+  },
+  { 
+    name: 'lancemax',
+    url: 'https://lancemax.com/',
+    aliases: ['lance', 'lm']
   },
   {
     name: 'wishlist',
@@ -120,24 +139,39 @@ const redirects = [
     aliases: ['presentation', 'slide', 'present']
   },
   {
+    name: 'stack',
+    description: 'A list of tools and devices I use',
+    url: 'https://yourstack.com/@' + USERNAME_SHORT,
+    aliases: ['yourstack', 'ys']
+  },
+  {
+    name: 'work',
+    description: 'The website of the company I currently work at',
+    url: 'https://hpm.agency',
+    aliases: ['hpm', 'agency']
+  },
+  { 
+    name: 'tesora', 
+    description: 'an app I helped build',
+    url: 'https://tesora.app/' 
+  },
+  {
     name: 'telegram',
     url: 'https://t.me/' + USERNAME_SHORT,
     aliases: ['tg', 'tele']
   },
-  {
-    name: 'stack',
-    url: 'https://yourstack.com/@' + USERNAME_SHORT,
-    aliases: ['yourstack', 'ys']
+  { 
+    name: 'stickers',
+    description: 'my telegram sticker pack',
+    url: 'https://t.me/addstickers/memesterer' 
   },
-  { name: 'stickers', url: 'https://t.me/addstickers/memesterer' },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
-  { name: 'reddit', url: 'https://www.reddit.com/user/themissing_link' },
   { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
   { name: 'api', url: 'https://dnnsmnstrr.vercel.app/api/' },
   { name: 'help', url: 'redirects', aliases: ['available', 'urls', 'list'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
-  { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate'] }, //add query params
+  { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fuckyou'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io' }, //shortcut to website repo
 ]
 
