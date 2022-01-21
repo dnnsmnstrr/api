@@ -73,10 +73,18 @@
   },
   {
     "date_start": "2019-08-01T00:00:00.000Z",
+    "date_end": "2022-01-14T00:00:00.000Z",
     "title": "Apprenticeship at hpm.",
     "city": "Wiesbaden, Germany",
     "color": "#0F81FD",
+    "url": "https://hpm.agency"
+  },
+  {
+    "date_start": "2019-08-01T00:00:00.000Z",
     "ongoing": "true",
+    "title": "Junior Developer at hpm.",
+    "city": "Wiesbaden, Germany",
+    "color": "#0F81FD",
     "url": "https://hpm.agency"
   }
 ]
