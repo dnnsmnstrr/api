@@ -142,7 +142,7 @@ const redirects = [
     name: 'stack',
     description: 'A list of tools and devices I use',
     url: 'https://yourstack.com/@' + USERNAME_SHORT,
-    aliases: ['yourstack', 'ys']
+    aliases: ['yourstack', 'ys', 'techstack']
   },
   {
     name: 'work',
@@ -159,11 +159,6 @@ const redirects = [
     name: 'telegram',
     url: 'https://t.me/' + USERNAME_SHORT,
     aliases: ['tg', 'tele']
-  },
-  {
-    name: 'stack',
-    url: 'https://yourstack.com/@' + USERNAME_SHORT,
-    aliases: ['yourstack', 'ys', 'techstack']
   },
   {
     name: 'it-talents',
