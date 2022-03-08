@@ -127,7 +127,12 @@ const redirects = [
   {
     name: 'stack',
     url: 'https://yourstack.com/@' + USERNAME_SHORT,
-    aliases: ['yourstack', 'ys']
+    aliases: ['yourstack', 'ys', 'techstack']
+  },
+  {
+    name: 'it-talents',
+    url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
+    aliases: ['stipendium', 'interview']
   },
   { name: 'stickers', url: 'https://t.me/addstickers/memesterer' },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
@@ -137,7 +142,7 @@ const redirects = [
   { name: 'api', url: 'https://dnnsmnstrr.vercel.app/api/' },
   { name: 'help', url: 'redirects', aliases: ['available', 'urls', 'list'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
-  { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate'] }, //add query params
+  { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io' }, //shortcut to website repo
 ]
 
