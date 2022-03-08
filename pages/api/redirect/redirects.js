@@ -164,6 +164,7 @@ const redirects = [
     name: 'it-talents',
     url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
     aliases: ['stipendium', 'interview']
+  }, 
   { 
     name: 'stickers',
     description: 'my telegram sticker pack',
