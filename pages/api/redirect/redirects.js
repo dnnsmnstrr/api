@@ -170,7 +170,7 @@ const redirects = [
     description: 'my telegram sticker pack',
     url: 'https://t.me/addstickers/memesterer' 
   },
-  { name: 'resume', url 'https://resume.github.io/?' + USERNAME_SHORT }
+  { name: 'resume', url 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
   { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
