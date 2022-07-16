@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import SwaggerUI from "swagger-ui-react"
-import swagger from '../docs/swagger.json'
 
 const Home = () => (
   <div className="container">
@@ -12,14 +10,14 @@ const Home = () => (
 
 
     <main>
-    <SwaggerUI spec={swagger} />
 
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-      <Link href="https://dnnsmnstrr.github.io" as={(process.env.BACKEND_URL || '')}>
-        <a>Homepage</a>
-      </Link>
+      <h2 className="title">
+        Welcome to my <a href="https://dnnsmnstrr.vercel.app">API</a>
+      </h2>
+
+      <a className='homepage-link' href="https://dnnsmnstrr.github.io">
+        {'<-'} Return to homepage
+      </a>
     </main>
 
     <footer>
@@ -50,6 +48,10 @@ const Home = () => (
         justify-content: center;
         align-items: center;
       }
+
+	  homepage-link {
+		  margin-top: 25px;
+	  }
 
       footer {
         width: 100%;
@@ -89,7 +91,7 @@ const Home = () => (
       .title {
         margin: 0;
         line-height: 1.15;
-        font-size: 4rem;
+        font-size: 3rem;
       }
 
       .title,

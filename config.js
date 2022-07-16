@@ -14,7 +14,7 @@ const ALTERNATE_EMAILS = ['aol.com', 'icloud.com', 'dm@hpm.agency']
 
 // Domain
 const DOMAIN_NAME = 'muensterer'
-const DOMAIN_EXTENSION = '.tech'
+const DOMAIN_EXTENSION = '.codes'
 const DEFAULT_URL = 'https://' + DOMAIN_NAME + DOMAIN_EXTENSION
 
 export {

@@ -13,11 +13,14 @@
     "version" : "1.1.0"
   },
   "servers" : [ {
-    "url" : "http://next.muensterer.xyz/api",
-    "description" : "NextJs"
+    "url" : "http://dnnsmnstrr.vercel.app/api",
+    "description" : "Vercel"
   }, {
     "url" : "https://virtserver.swaggerhub.com/dnnsmnstrr/dnnsmnstrr/1.1.0",
     "description" : "SwaggerHub API Auto Mocking"
+  }, {
+  	"url" : "http://localhost:3000/api",
+  	"description" : "Local Development Server"
   } ],
   "tags" : [ {
     "name" : "social",

@@ -52,8 +52,8 @@ const redirects = [
     url: 'https://facebook.com/' + USERNAME,
     aliases: ['f', 'fb', 'book', 'gesichtsbuch', 'meta']
   },
-  { 
-    name: 'reddit', 
+  {
+    name: 'reddit',
     url: 'https://www.reddit.com/user/themissing_link',
     aliases: ['r', 'readit', 'neckbeard']
   },
@@ -96,8 +96,7 @@ const redirects = [
     aliases: ['tt']
   },
   {
-    name: 'toolshare',
-    url: 'https://toolsharewith.me',
+    name: 'ToolShare',
     aliases: ['tool', 'tools']
   },
   {
@@ -109,7 +108,7 @@ const redirects = [
     url: 'https://fm-branding.de/',
     aliases: ['fdp', 'dumbass']
   },
-  { 
+  {
     name: 'lancemax',
     url: 'https://lancemax.com/',
     aliases: ['lance', 'lm']
@@ -150,10 +149,10 @@ const redirects = [
     url: 'https://hpm.agency',
     aliases: ['hpm', 'agency']
   },
-  { 
-    name: 'tesora', 
+  {
+    name: 'tesora',
     description: 'an app I helped build',
-    url: 'https://tesora.app/' 
+    url: 'https://tesora.app/'
   },
   {
     name: 'telegram',
@@ -164,13 +163,13 @@ const redirects = [
     name: 'it-talents',
     url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
     aliases: ['stipendium', 'interview']
-  }, 
-  { 
+  },
+  {
     name: 'stickers',
     description: 'my telegram sticker pack',
-    url: 'https://t.me/addstickers/memesterer' 
+    url: 'https://t.me/addstickers/memesterer'
   },
-  { name: 'resume', url 'https://resume.github.io/?' + USERNAME_SHORT },
+  { name: 'resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
   { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
@@ -268,7 +267,7 @@ export default function handler(req, res) {
     </body>
 </html>`
 
-  res.end(body, {headers: new Headers({'Content-Type': 'text/html'})})
+  res.send(body)
 }
 
-export { redirects, getRedirect }
+export { redirects, getRedirect, getRedirectURL }
