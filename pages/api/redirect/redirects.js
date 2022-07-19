@@ -97,7 +97,7 @@ const redirects = [
   },
   {
     name: 'ToolShare',
-    aliases: ['tool', 'tools']
+    aliases: ['tool', 'tools', 'toolshare']
   },
   {
     name: 'universe',
@@ -105,6 +105,7 @@ const redirects = [
   },
   {
     name: 'felix',
+    description: 'my brother\'s website',
     url: 'https://fm-branding.de/',
     aliases: ['fdp', 'dumbass']
   },
@@ -152,6 +153,7 @@ const redirects = [
   {
     name: 'tesora',
     description: 'an app I helped build',
+    aliases: ['tes'],
     url: 'https://tesora.app/'
   },
   {
@@ -161,6 +163,7 @@ const redirects = [
   },
   {
     name: 'it-talents',
+    description: 'an interview about a scholarship I received',
     url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
     aliases: ['stipendium', 'interview']
   },
@@ -169,10 +172,13 @@ const redirects = [
     description: 'my telegram sticker pack',
     url: 'https://t.me/addstickers/memesterer'
   },
-  { name: 'resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
+  { name: 'resume', url: 'https://registry.jsonresume.org/' + USERNAME_SHORT },
+  { name: 'github-resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
   { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
+  { name: 'status', url: 'https://muensterer.betteruptime.com', aliases: ['monitor', 'betteruptime'] },
+  { name: 'uptime', aliases: ['up', 'upptime']},
   { name: 'api', url: 'https://dnnsmnstrr.vercel.app/api/' },
   { name: 'help', url: 'redirects', aliases: ['available', 'urls', 'list'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
