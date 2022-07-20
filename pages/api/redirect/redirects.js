@@ -172,6 +172,11 @@ const redirects = [
     description: 'my telegram sticker pack',
     url: 'https://t.me/addstickers/memesterer'
   },
+  {
+    name: 'grepper',
+    url: 'https://www.codegrepper.com/profile/dennis-muensterer',
+    aliases: ['codegrepper', 'snippets']
+  },
   { name: 'resume', url: 'https://registry.jsonresume.org/' + USERNAME_SHORT },
   { name: 'github-resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
