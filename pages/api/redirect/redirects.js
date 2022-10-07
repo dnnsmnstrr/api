@@ -104,6 +104,11 @@ const redirects = [
     url: 'https://dnnsmnstrr.onuniverse.com'
   },
   {
+    name: 'yat',
+    url: 'https://y.at/🤖💻📱⌚🎧',
+    aliases: ['emoji']
+  },
+  {
     name: 'felix',
     description: 'my brother\'s website',
     url: 'https://fm-branding.de/',
