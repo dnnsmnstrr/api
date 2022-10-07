@@ -5,14 +5,19 @@ import { redirects } from './api/redirect/redirects'
 function Redirects() {
   const inputRef = useRef()
   const [filter, setFilter] = useState('')
+  const [filteredRedirects, setFilteredRedirects] = useState(redirects)
 
-  const filteredRedirects = redirects.filter(({ name, aliases = [] }) => {
-    const nameMatch = name.toLowerCase().includes(filter.toLowerCase())
-    const aliasMatch = aliases.some(alias => alias.toLowerCase().includes(filter.toLowerCase()))
-    return nameMatch || aliasMatch
-  })
+  const filterRedirects = (list) => {
+    return list.filter(({ name, aliases = [] }) => {
+      const nameMatch = name.toLowerCase().includes(filter.toLowerCase())
+      const aliasMatch = aliases.some(alias => alias.toLowerCase().includes(filter.toLowerCase()))
+      return nameMatch || aliasMatch
+    })
+  }
 
   useEffect(() => {
+    const newFilteredRedirects = filterRedirects(redirects)
+    setFilteredRedirects(newFilteredRedirects)
     document.onkeydown = function(evt) {
       evt = evt || window.event
       let isEscape = false
