@@ -1,4 +1,4 @@
-import {getRedirect} from './redirects'
+import { getRedirect } from './redirects'
 
 export default async (req, res) => {
   try {
