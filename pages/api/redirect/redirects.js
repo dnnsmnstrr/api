@@ -105,7 +105,7 @@ const redirects = [
   },
   {
     name: 'yat',
-    url: 'https://y.at/🤖💻📱⌚🎧',
+    url: 'https://y.at/robot.laptop.phone.watch.headphone',
     aliases: ['emoji']
   },
   {
@@ -182,7 +182,7 @@ const redirects = [
     url: 'https://www.codegrepper.com/profile/dennis-muensterer',
     aliases: ['codegrepper', 'snippets']
   },
-  { name: 'statsfm', url: 'https://stats.fm/' + USERNAME_LONG, aliases: ['spotistats'] },
+  { name: 'statsfm', url: 'https://stats.fm/' + USERNAME, aliases: ['spotistats'] },
   { name: 'resume', url: 'https://registry.jsonresume.org/' + USERNAME_SHORT },
   { name: 'github-resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
@@ -263,28 +263,8 @@ const getRedirectURL = ({url, name}, {route = [], query, noReturn, ...params} = 
 export default function handler(req, res) {
   const { slug } = req.query
   const sortedRedirects = redirects.sort((a, b) => a.name.localeCompare(b.name))
-  const buildList = () => {
-    const listItems = sortedRedirects.map((redirect) => (
-      `<li><a href="${getRedirectURL(redirect)}" title="${redirect.aliases && redirect.aliases.length ? 'Aliases: ' + redirect.aliases.join(', ') : 'No Aliases'}" >${redirect.name}</a></li>`
-    ))
-    return listItems.join('')
-  }
 
-  const body = `<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Redirects</title>
-    </head>
-    <body>
-      <h1>Available Redirects</h1>
-      <ul>
-        ${buildList()}
-      </ul>
-    </body>
-</html>`
-
-  res.send(body)
+  res.json(sortedRedirects)
 }
 
 export { redirects, getRedirect, getRedirectURL }

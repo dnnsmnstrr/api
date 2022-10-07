@@ -14,10 +14,13 @@ const Home = () => (
       <h2 className="title">
         Welcome to my <a href="https://dnnsmnstrr.vercel.app">API</a>
       </h2>
-
+      <br />
       <a className='homepage-link' href="https://dnnsmnstrr.github.io">
         {'<-'} Return to homepage
       </a>
+
+      <br />
+      <Link href="/redirects">Search Redirects</Link>
     </main>
 
     <footer>
@@ -26,7 +29,7 @@ const Home = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" />
+        Powered by <img src="/vercel.svg" alt="Vercel" />
       </a>
     </footer>
 
