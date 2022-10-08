@@ -16,8 +16,10 @@ const ALTERNATE_EMAILS = ['aol.com', 'icloud.com', 'dm@hpm.agency']
 const DOMAIN_NAME = 'muensterer'
 const DOMAIN_EXTENSION = '.codes'
 const DEFAULT_URL = 'https://' + DOMAIN_NAME + DOMAIN_EXTENSION
+const API_URL = 'https://dnnsmnstrr.vercel.app'
 
 export {
+  API_URL,
   DEFAULT_URL,
   FULL_NAME,
   BIRTHDATE,

@@ -1,6 +1,7 @@
 import getSocial from '../social/getSocial'
 import getPlaylist from '../playlist/getPlaylist'
 import {
+  API_URL,
   DEFAULT_URL,
   USERNAME,
   USERNAME_SHORT,
@@ -190,8 +191,8 @@ const redirects = [
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
   { name: 'status', url: 'https://muensterer.betteruptime.com', aliases: ['monitor', 'betteruptime'] },
   { name: 'uptime', aliases: ['up', 'upptime']},
-  { name: 'api', url: 'https://dnnsmnstrr.vercel.app/api/' },
-  { name: 'help', url: 'redirects', aliases: ['available', 'urls', 'list'] },
+  { name: 'api', url: API_URL + '/api/' },
+  { name: 'help', aliases: ['available', 'urls', 'list'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
   { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io' }, //shortcut to website repo
@@ -201,6 +202,10 @@ const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
   const [ query, ...restRoute] = route
   let redirect
   switch (query) {
+    case 'help':
+      redirect = { url: API_URL + '/redirects' }
+      console.log('redirect', redirect)
+      break
     case 'random':
       redirect = redirects[Math.floor(Math.random() * redirects.length)]
       break
