@@ -72,7 +72,7 @@ function Redirects() {
       <Link href='/' passHref><a style={{ textDecoration: 'none' }}>{'<- Back'}</a></Link>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 40 }}>
         <div style={{ minWidth: 300, maxWidth: 500, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <input ref={inputRef} autoFocus autocomplete="off" name="filter" id="filter" type="text" placeholder='redirects' value={filter} onChange={(e) => setFilter(e.target.value)} style={{ width: '100%', height: 50, paddingLeft: 20, fontSize: 20, marginBottom: 20, borderRadius: 30 }} />
+          <input ref={inputRef} autoFocus autocomplete="off" name="filter" id="filter" type="text" placeholder='redirects' value={filter} onChange={(e) => setFilter(e.target.value)} style={{ width: '100%', height: 50, paddingLeft: 30, fontSize: 20, marginBottom: 20, borderRadius: 30 }} />
           <ul style={{ listStyle: 'inside', width: '100%', paddingLeft: 0 }}>
             {filteredRedirects.map(({ name, url, aliases = [] }, index) => (
               <li key={name} title={aliases.join(', ')} style={{ fontSize: 20, marginBottom: 10, backgroundColor: index === selectedIndex ? '#d3d3d330' : null, borderRadius: 20, padding: 20 }}>

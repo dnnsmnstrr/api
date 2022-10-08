@@ -204,6 +204,7 @@ const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
   const [ query, ...restRoute] = route
   let redirect
   switch (query) {
+    case 'redirect':
     case 'help':
       redirect = { url: API_URL + '/redirects' }
       console.log('redirect', redirect)
