@@ -24,6 +24,9 @@ function Redirects() {
 
   useEffect(() => {
     const newFilteredRedirects = filterRedirects(redirects)
+    if (newFilteredRedirects.length < selectedIndex) {
+      setSelectedIndex(null)
+    }
     setFilteredRedirects(newFilteredRedirects)
   }, [filter])
 
@@ -42,16 +45,18 @@ function Redirects() {
           }
           break;
         case 'ArrowDown':
-          if (selectedIndex <= filteredRedirects.length - 1) {
+          if (!selectedIndex || selectedIndex < filteredRedirects.length - 1) {
             setSelectedIndex(prev => prev === null ? 0 : prev + 1)
           }
           break;
         case 'Enter':
+          let href
           if (selectedIndex) {
-            window.location.href = filteredRedirects[selectedIndex].url
+            href = filteredRedirects[selectedIndex].url || '/api/redirect/' + filteredRedirects[selectedIndex].name
           } else {
-            window.location.href = filteredRedirects[0].url
+            href = filteredRedirects[0].url || '/api/redirect/' + filteredRedirects[0].name
           }
+          window.location.href = href
         default:
           console.log('evt', evt)
           if (inputRef.current) {
@@ -63,9 +68,9 @@ function Redirects() {
   }, [filteredRedirects, selectedIndex])
 
   return (
-    <div>
+    <div style={{ paddingTop: 20 }}>
       <Link href='/' passHref><a style={{ textDecoration: 'none' }}>{'<- Back'}</a></Link>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 80 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 40 }}>
         <div style={{ minWidth: 300, maxWidth: 500, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <input ref={inputRef} autoFocus autocomplete="off" name="filter" id="filter" type="text" placeholder='redirects' value={filter} onChange={(e) => setFilter(e.target.value)} style={{ width: '100%', height: 50, paddingLeft: 20, fontSize: 20, marginBottom: 20, borderRadius: 30 }} />
           <ul style={{ listStyle: 'inside', width: '100%', paddingLeft: 0 }}>

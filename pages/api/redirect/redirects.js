@@ -183,8 +183,11 @@ const redirects = [
     url: 'https://www.codegrepper.com/profile/dennis-muensterer',
     aliases: ['codegrepper', 'snippets']
   },
+  { name: 'lebenslauf', aliases: ['cv'] },
+  { name: 'life', aliases: ['timeline'] },
+  { name: 'help', aliases: ['available', 'urls', 'list'] },
   { name: 'statsfm', url: 'https://stats.fm/' + USERNAME, aliases: ['spotistats'] },
-  { name: 'resume', url: 'https://registry.jsonresume.org/' + USERNAME_SHORT },
+  { name: 'resume', url: 'https://registry.jsonresume.org/' + USERNAME_SHORT, aliases: ['jsonresume'] },
   { name: 'github-resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
   { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
@@ -192,7 +195,6 @@ const redirects = [
   { name: 'status', url: 'https://muensterer.betteruptime.com', aliases: ['monitor', 'betteruptime'] },
   { name: 'uptime', aliases: ['up', 'upptime']},
   { name: 'api', url: API_URL + '/api/' },
-  { name: 'help', aliases: ['available', 'urls', 'list'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
   { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io' }, //shortcut to website repo
