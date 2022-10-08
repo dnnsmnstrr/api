@@ -102,7 +102,8 @@ const redirects = [
   },
   {
     name: 'universe',
-    url: 'https://dnnsmnstrr.onuniverse.com'
+    url: 'https://dnnsmnstrr.univer.se',
+    aliases: ['dennis']
   },
   {
     name: 'yat',
@@ -203,6 +204,7 @@ const redirects = [
 const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
   const [ query, ...restRoute] = route
   let redirect
+  console.log('query', query)
   switch (query) {
     case 'redirect':
     case 'help':

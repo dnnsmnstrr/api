@@ -45,18 +45,21 @@ function Redirects() {
           }
           break;
         case 'ArrowDown':
-          if (!selectedIndex || selectedIndex < filteredRedirects.length - 1) {
+          if (!selectedIndex || selectedIndex < (filteredRedirects.length - 1)) {
             setSelectedIndex(prev => prev === null ? 0 : prev + 1)
           }
           break;
         case 'Enter':
-          let href
+          let path
           if (selectedIndex) {
-            href = filteredRedirects[selectedIndex].url || '/api/redirect/' + filteredRedirects[selectedIndex].name
+            path = filteredRedirects[selectedIndex].url || filteredRedirects[selectedIndex].name
           } else {
-            href = filteredRedirects[0].url || '/api/redirect/' + filteredRedirects[0].name
+            path = filteredRedirects[0].url || filteredRedirects[0].name
           }
-          window.location.href = href
+          if (!path.includes('http')) {
+            path = '/api/redirect/' + path
+          }
+          window.location.href = path
         default:
           console.log('evt', evt)
           if (inputRef.current) {
