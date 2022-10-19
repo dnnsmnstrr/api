@@ -186,6 +186,7 @@ const redirects = [
     aliases: ['codegrepper', 'snippets']
   },
   { name: 'lebenslauf', aliases: ['cv'] },
+  { name: 'readcv', url: 'https://read.cv/dnnsmnstrr' }, 
   { name: 'life', aliases: ['timeline'] },
   { name: 'help', aliases: ['available', 'urls', 'list'] },
   { name: 'statsfm', url: 'https://stats.fm/' + USERNAME, aliases: ['spotistats'] },
