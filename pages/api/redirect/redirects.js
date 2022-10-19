@@ -145,11 +145,12 @@ const redirects = [
     url: 'https://slides.com/' + USERNAME,
     aliases: ['presentation', 'slide', 'present']
   },
+  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/stack' },
   {
     name: 'stack',
     description: 'A list of tools and devices I use',
-    url: 'https://yourstack.com/@' + USERNAME_SHORT,
-    aliases: ['yourstack', 'ys', 'techstack']
+    url: 'https://stackshare.io/' + USERNAME_SHORT + 'my-stack',
+    aliases: ['mystack', 'techstack']
   },
   {
     name: 'work',
@@ -199,6 +200,7 @@ const redirects = [
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
   { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io' }, //shortcut to website repo
+  { name: 'edit-redirects', url: 'github/api/edit/master/pages/api/redirect/redirects.js' }, //link to these redirects
 ]
 
 const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
