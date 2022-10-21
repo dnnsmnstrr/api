@@ -145,7 +145,7 @@ const redirects = [
     url: 'https://slides.com/' + USERNAME,
     aliases: ['presentation', 'slide', 'present']
   },
-  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/stack' },
+  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/uses' },
   {
     name: 'stack',
     description: 'A list of tools and devices I use',
