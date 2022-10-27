@@ -49,6 +49,12 @@ const redirects = [
     aliases: ['t', 'tw', 'tweet', 'tweets', 'hashtag']
   },
   {
+    name: 'mastodon',
+    url: 'https://mastodon.social/@' + USERNAME_SHORT,
+    description: 'twitter alternative',
+    aliases: ['mast', 'tröt', 'fediverse', 'toot']
+  },
+  {
     name: 'facebook',
     url: 'https://facebook.com/' + USERNAME,
     aliases: ['f', 'fb', 'book', 'gesichtsbuch', 'meta']
