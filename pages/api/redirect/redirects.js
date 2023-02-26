@@ -34,7 +34,7 @@ const redirects = [
   },
   {
     name: 'spotify',
-    description: 'Music is Life!',
+    description: 'Music is life!',
     url: 'https://open.spotify.com/user/' + USERNAME,
     aliases: ['s', 'sp', 'spot', 'music']
   },
@@ -86,7 +86,7 @@ const redirects = [
   {
     name: 'dendron',
     description: 'An alternate deployment of my notes, using dendron',
-    url: 'https://dnnsmnstrr.gitlab.io/zettelkasten'
+    url: `https://${USERNAME_SHORT}.gitlab.io/zettelkasten`
   },
   {
     name: 'dotfiles',
@@ -99,7 +99,7 @@ const redirects = [
   },
   {
     name: 'tiktok',
-    url: 'https://www.tiktok.com/@dnnsmnstrr',
+    url: `https://www.tiktok.com/@${USERNAME_SHORT}`,
     aliases: ['tt']
   },
   {
@@ -108,7 +108,7 @@ const redirects = [
   },
   {
     name: 'universe',
-    url: 'https://dnnsmnstrr.univer.se',
+    url: `https://${USERNAME_SHORT}.univer.se`,
     aliases: ['dennis']
   },
   {
@@ -134,8 +134,13 @@ const redirects = [
   },
   {
     name: 'kickstarter',
-    url: 'https://www.kickstarter.com/profile/dennismuensterer',
+    url: 'https://www.kickstarter.com/profile/' + USERNAME,
     aliases: ['ks', 'crowdfunding', 'backed']
+  },
+  {
+    name: 'imdb',
+    url: 'https://www.imdb.com/user/ur31201407',
+    aliases: ['movies', 'ratings', 'watchlist']
   },
   {
     name: 'steam',
@@ -151,11 +156,11 @@ const redirects = [
     url: 'https://slides.com/' + USERNAME,
     aliases: ['presentation', 'slide', 'present']
   },
-  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/uses' },
+  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/uses' }, //https://uses.tech/
   {
     name: 'stack',
     description: 'A list of tools and devices I use',
-    url: 'https://stackshare.io/' + USERNAME_SHORT + 'my-stack',
+    url: 'https://stackshare.io/' + USERNAME_SHORT + '/my-stack',
     aliases: ['mystack', 'techstack']
   },
   {
@@ -171,6 +176,12 @@ const redirects = [
     url: 'https://tesora.app/'
   },
   {
+    name: 'voteos',
+    description: 'a blockchain voting platform',
+    url: 'https://voteos.com',
+    aliases: ['voe', 'vote']
+  },
+  {
     name: 'telegram',
     url: 'https://t.me/' + USERNAME_SHORT,
     aliases: ['tg', 'tele']
@@ -179,7 +190,7 @@ const redirects = [
     name: 'it-talents',
     description: 'an interview about a scholarship I received',
     url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
-    aliases: ['stipendium', 'interview']
+    aliases: ['stipendium', 'interview', 'scholarship']
   },
   {
     name: 'stickers',
@@ -192,7 +203,7 @@ const redirects = [
     aliases: ['codegrepper', 'snippets']
   },
   { name: 'lebenslauf', aliases: ['cv'] },
-  { name: 'readcv', url: 'https://read.cv/dnnsmnstrr' }, 
+  { name: 'readcv', url: 'https://read.cv/' + USERNAME_SHORT }, 
   { name: 'life', aliases: ['timeline'] },
   { name: 'help', aliases: ['available', 'urls', 'list'] },
   { name: 'statsfm', url: 'https://stats.fm/' + USERNAME, aliases: ['spotistats'] },
