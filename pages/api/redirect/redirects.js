@@ -14,7 +14,7 @@ const redirects = [
     name: 'homepage',
     description: 'My Homepage, hosted on GitHub Pages',
     url: DEFAULT_URL, //required to override default behaviour
-    aliases: ['home', 'main', 'root', 'landing']
+    aliases: ['home', 'main', 'root', 'landing', '🏠']
   },
   {
     name: 'contact',
