@@ -231,6 +231,7 @@ const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
       redirect = { url: API_URL + '/redirects' }
       console.log('redirect', redirect)
       break
+    case '🔀':
     case 'random':
       redirect = redirects[Math.floor(Math.random() * redirects.length)]
       break
