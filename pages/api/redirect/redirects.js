@@ -216,6 +216,7 @@ const redirects = [
   { name: 'uptime', aliases: ['up', 'upptime']},
   { name: 'api', url: API_URL + '/api/' },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
+  { name: 'shuffle', url: 'random', aliases: ['feelinglucky', '🔀', '🎲']},
   { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu', '🖕'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io', aliases: ['✏️', '🖊️'] }, //shortcut to website repo
   { name: 'edit-redirects', url: 'github/api/edit/master/pages/api/redirect/redirects.js', aliases: ['↪️', '↩️', '🔃'] }, //link to these redirects
@@ -231,7 +232,6 @@ const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
       redirect = { url: API_URL + '/redirects' }
       console.log('redirect', redirect)
       break
-    case '🔀':
     case 'random':
       redirect = redirects[Math.floor(Math.random() * redirects.length)]
       break
