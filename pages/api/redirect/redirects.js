@@ -84,6 +84,11 @@ const redirects = [
     aliases: ['z', 'n', 'zk', 'zettel', 'notes', 'slipbox', 'knowlege', '📔', '📓', '🗃️']
   },
   {
+    name: 'now',
+    aliases: ['currently', 'atm', 'doing', 'update'],
+    url: 'zettelkasten/now'
+  }, 
+  {
     name: 'dendron',
     description: 'An alternate deployment of my notes, using dendron',
     url: `https://${USERNAME_SHORT}.gitlab.io/zettelkasten`
@@ -156,7 +161,7 @@ const redirects = [
     url: 'https://slides.com/' + USERNAME,
     aliases: ['presentation', 'slide', 'present', '📈', '🪧']
   },
-  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/uses' }, //https://uses.tech/
+  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/uses' }, // https://uses.tech/
   {
     name: 'stack',
     description: 'A list of tools and devices I use',
