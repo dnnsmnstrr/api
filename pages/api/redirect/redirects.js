@@ -94,6 +94,12 @@ const redirects = [
     url: `https://${USERNAME_SHORT}.gitlab.io/zettelkasten`
   },
   {
+    name: 'flowershow',
+    description: 'Yet another zettelkasten deployment',
+    url: 'https://zettelkasten-flowershow.vercel.app',
+    aliases: ['flower', 'flowerpower', '💐']
+  },
+  {
     name: 'dotfiles',
     aliases: ['d', 'df', 'setup', 'dot', 'config', '⚙️']
   },
