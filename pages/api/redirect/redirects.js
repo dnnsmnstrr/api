@@ -8,7 +8,11 @@ import {
   EMAIL
 } from '../../../config'
 
-// no url means the redirect will be built out of the default url and the given name
+// no url means the redirect will be built out of the default url and the name
+// name: the main string to match a redirect to
+// description?: short text about where this will link or what this will do
+// url?: a relative path or full url to a different website
+// aliases?: an array of additional strings to match a redirect to (can also include emoji)
 const redirects = [
   {
     name: 'homepage',
@@ -67,7 +71,7 @@ const redirects = [
   {
     name: 'linkedin',
     url: 'https://www.linkedin.com/in/' + USERNAME,
-    aliases: ['l', 'in', 'linked', '🧑‍💼', '💼']
+    aliases: ['l', 'in', 'linked', 'jobs', '🧑‍💼', '💼']
   },
   {
     name: 'paypal',
@@ -85,6 +89,7 @@ const redirects = [
   },
   {
     name: 'now',
+    description: 'A page with information about what I\'m up to at the moment',
     aliases: ['currently', 'atm', 'doing', 'update'],
     url: 'zettelkasten/now'
   }, 
@@ -111,7 +116,7 @@ const redirects = [
   {
     name: 'tiktok',
     url: `https://www.tiktok.com/@${USERNAME_SHORT}`,
-    aliases: ['tt', '🇨🇳']
+    aliases: ['tt', 'spyware', '🇨🇳']
   },
   {
     name: 'ToolShare',
@@ -131,7 +136,7 @@ const redirects = [
     name: 'felix',
     description: 'my brother\'s website',
     url: 'https://fm-branding.de/',
-    aliases: ['fdp', 'dumbass', '🤑']
+    aliases: ['fdp', 'lindner-junior', 'dumbass', '🤑']
   },
   {
     name: 'lancemax',
@@ -167,7 +172,7 @@ const redirects = [
     url: 'https://slides.com/' + USERNAME,
     aliases: ['presentation', 'slide', 'present', '📈', '🪧']
   },
-  { name: 'uses', description: 'redirect to zettelkasten stack', url: 'zettelkasten/uses' }, // https://uses.tech/
+  { name: 'uses', description: 'a list of tech I use', url: 'zettelkasten/uses' }, // https://uses.tech/
   {
     name: 'stack',
     description: 'A list of tools and devices I use',
@@ -225,10 +230,11 @@ const redirects = [
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
   { name: 'status', url: 'https://muensterer.betteruptime.com', aliases: ['monitor', 'betteruptime', '✅'] },
   { name: 'uptime', aliases: ['up', 'upptime']},
-  { name: 'api', url: API_URL + '/api/' },
+  { name: 'api', description: 'my personal API page', url: API_URL },
+  { name: 'information', url: API_URL + '/api/dennis', description: 'information about me in JSON format', aliases: ['info', 'stats', 'personal-data', 'ℹ️', 'ℹ'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
   { name: 'shuffle', url: 'random', aliases: ['feelinglucky', '🔀', '🎲']},
-  { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu', '🖕'] }, //add query params
+  { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu', '🖕', 'haters-gonna-hate'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io', aliases: ['✏️', '🖊️'] }, //shortcut to website repo
   { name: 'edit-redirects', url: 'github/api/edit/master/pages/api/redirect/redirects.js', aliases: ['↪️', '↩️', '🔃'] }, //link to these redirects
 ]
