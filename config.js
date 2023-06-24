@@ -13,10 +13,10 @@ const EMAIL = USERNAME + '@gmail.com'
 const ALTERNATE_EMAILS = ['aol.com', 'icloud.com', 'dm@hpm.agency']
 
 // Domain
-const DOMAIN_NAME = 'muensterer'
-const DOMAIN_EXTENSION = '.codes'
-const DEFAULT_URL = 'https://' + DOMAIN_NAME + DOMAIN_EXTENSION
-const API_URL = 'https://dnnsmnstrr.vercel.app'
+const SECOND_LEVEL_DOMAIN = 'muensterer'
+const TOP_LEVEL_DOMAIN = 'lol'
+const DEFAULT_URL = 'https://' + DOMAIN_NAME + '.' + DOMAIN_EXTENSION
+const API_URL = `https://${USERNAME_SHORT}.vercel.app`
 
 export {
   API_URL,
