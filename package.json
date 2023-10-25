@@ -11,7 +11,7 @@
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
-    "next": "12",
+    "next": "13",
     "next-swagger-doc": "^0.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
