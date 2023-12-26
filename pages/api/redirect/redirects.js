@@ -203,6 +203,11 @@ const redirects = [
     aliases: ['tg', 'tele', '📠', '💬']
   },
   {
+    name: 'bereal',
+    url: 'https://bere.al/' + USERNAME_SHORT,
+    aliases: ['real', '⏰']
+  },
+  {
     name: 'it-talents',
     description: 'an interview about a scholarship I received',
     url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
