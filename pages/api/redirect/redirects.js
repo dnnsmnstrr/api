@@ -261,12 +261,12 @@ const redirects = [
   { name: 'information', url: API_URL + '/api/dennis', description: 'information about me in JSON format', aliases: ['info', 'stats', 'personal-data', 'ℹ️', 'ℹ'] },
   { name: 'edit-info', url: 'github/api/edit/master/pages/api/dennis.js', aliases: ['edit-information'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
-  { name: 'shuffle', url: 'random', aliases: ['feelinglucky', '🔀', '🎲']},
+  { name: 'shuffle', url: 'random', aliases: ['feelinglucky', '🔀', '🎲', 'roll']},
   { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
-  { name: 'admin', url: 'https://youareanidiot.cc/', aliases: ['idiot', 'troll'] },
+  { name: 'admin', url: 'https://youareanidiot.cc/', aliases: ['wp-admin', 'idiot', 'troll'] },
   { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu', '🖕', 'haters-gonna-hate'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io', aliases: ['✏️', '🖊️'] }, //shortcut to website repo
-  { name: 'edit-redirects', url: 'github/api/edit/master/pages/api/redirect/redirects.js', aliases: ['↪️', '↩️', '🔃'] }, //link to these redirects
+  { name: 'edit-redirects', url: 'github/api/edit/master/pages/api/redirect/redirects.js', aliases: ['↪️', '↩️', '🔃', 'edit-redirect'] }, //link to these redirects
   { name: 'help', aliases: ['?', 'available', 'urls', 'list', '🆘', '❔', '❓'] },
 ]
 
