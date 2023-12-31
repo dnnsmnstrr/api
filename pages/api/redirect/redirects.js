@@ -251,8 +251,8 @@ const redirects = [
   { name: 'edit-resume', url: 'https://gist.github.com/dnnsmnstrr/548256752a08213eded1c5c90dbe7767/edit', aliases: ['resume.json'] }, //link to these redirects
   { name: 'github-resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
   { name: 'readcv', url: 'https://read.cv/' + USERNAME_SHORT }, 
-  { name: 'cv', url: 'https://cv-dennismuensterer.vercel.app/', descriptions: 'my cv as a next.js page', aliases: ['next-cv' }, 
-  { name: 'edit-cv', url: 'https://github.com/dnnsmnstrr/cv/blob/main/src/data/resume-data.tsx/', descriptions: 'my cv as a next.js page', aliases: ['next-cv' }, 
+  { name: 'cv', url: 'https://cv-dennismuensterer.vercel.app/', description: 'my cv as a next.js page', aliases: ['next-cv'] }, 
+  { name: 'edit-cv', url: 'https://github.com/dnnsmnstrr/cv/blob/main/src/data/resume-data.tsx' }, 
   { name: 'life', aliases: ['timeline', '📅'] },
   // meta
   { name: 'status', url: 'https://muensterer.betteruptime.com', aliases: ['monitor', 'betteruptime', '✅'] },
