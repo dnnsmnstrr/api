@@ -42,6 +42,8 @@ const redirects = [
     url: 'https://open.spotify.com/user/' + USERNAME,
     aliases: ['s', 'sp', 'spot', 'music', '🎵', '🎧']
   },
+  { name: 'statsfm', url: 'https://stats.fm/' + USERNAME, aliases: ['spotistats', '📊'] },
+  // Socials
   {
     name: 'instagram',
     url: 'https://www.instagram.com/' + USERNAME_SHORT,
@@ -74,25 +76,24 @@ const redirects = [
     aliases: ['l', 'in', 'linked', 'jobs', '🧑‍💼', '💼']
   },
   {
-    name: 'paypal',
-    url: 'https://www.paypal.com/paypalme/' + USERNAME,
-    aliases: ['p', 'pp', 'pay', 'donate', 'sendmoney', 'wheremymoneyat', '💰', '💸', '🫰']
-  },
-  {
     name: 'youtube',
     url: 'https://www.youtube.com/user/' + USERNAME,
     aliases: ['y', 'yt', 'tube', 'videos', 'watch', '📹', '📺']
   },
   {
+    name: 'telegram',
+    url: 'https://t.me/' + USERNAME_SHORT,
+    aliases: ['tg', 'tele', '📠', '💬']
+  },
+  {
+    name: 'bereal',
+    url: 'https://bere.al/' + USERNAME_SHORT,
+    aliases: ['real', '⏰']
+  },
+  {
     name: 'zettelkasten',
     aliases: ['z', 'n', 'zk', 'zettel', 'notes', 'slipbox', 'knowlege', '📔', '📓', '🗃️']
   },
-  {
-    name: 'now',
-    description: 'A page with information about what I\'m up to at the moment',
-    aliases: ['currently', 'atm', 'doing', 'update'],
-    url: 'zettelkasten/now'
-  }, 
   {
     name: 'dendron',
     description: 'An alternate deployment of my notes, using dendron',
@@ -119,34 +120,9 @@ const redirects = [
     aliases: ['tt', 'spyware', '🇨🇳']
   },
   {
-    name: 'ToolShare',
-    aliases: ['tool', 'tools', 'toolshare', '🧰']
-  },
-  {
-    name: 'universe',
-    url: `https://${USERNAME_SHORT}.univer.se`,
-    aliases: ['dennis', '🌌']
-  },
-  {
-    name: 'yat',
-    url: 'https://y.at/robot.laptop.phone.watch.headphone',
-    aliases: ['emoji', '🤖💻📱⌚🎧']
-  },
-  {
-    name: 'felix',
-    description: 'my brother\'s website',
-    url: 'https://fm-branding.de/',
-    aliases: ['fdp', 'lindner-junior', 'dumbass', '🤑']
-  },
-  {
-    name: 'lancemax',
-    url: 'https://lancemax.com/',
-    aliases: ['lance', 'lm']
-  },
-  {
-    name: 'wishlist',
-    url: 'https://www.amazon.de/hz/wishlist/ls/1Y2URDXEYY1JO',
-    aliases: ['wish', 'gift', 'birthday', '🎂', '🎁']
+    name: 'paypal',
+    url: 'https://www.paypal.com/paypalme/' + USERNAME,
+    aliases: ['p', 'pp', 'pay', 'donate', 'sendmoney', 'wheremymoneyat', '💰', '💸', '🫰']
   },
   {
     name: 'kickstarter',
@@ -163,22 +139,79 @@ const redirects = [
     url: 'https://steamcommunity.com/id/' + USERNAME_SHORT,
     aliases: ['gaming', 'play', 'zocken', '🎮', '👾']
   },
+  { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
+  // Projects
+  {
+    name: 'ToolShare',
+    aliases: ['tool', 'tools', 'toolshare', '🧰']
+  },
   {
     name: 'humblekeys',
     aliases: ['humble', 'keys', 'games', 'freegames', '🕹️', '🔑']
   },
   {
-    name: 'slides',
-    url: 'https://slides.com/' + USERNAME,
-    aliases: ['presentation', 'slide', 'present', '📈', '🪧']
+    name: 'universe',
+    url: `https://${USERNAME_SHORT}.univer.se`,
+    aliases: ['dennis', '🌌']
   },
+  {
+    name: 'shortcuts',
+    url: 'https://routinehub.co/user/' + USERNAME_SHORT,
+    description: 'my published shortcuts',
+    aliases: ['sc', 'siri']
+  },
+  {
+    name: 'yat',
+    url: 'https://y.at/robot.laptop.phone.watch.headphone',
+    aliases: ['emoji', '🤖💻📱⌚🎧']
+  },
+  {
+    name: 'stickers',
+    description: 'my telegram sticker pack',
+    url: 'https://t.me/addstickers/memesterer'
+  },
+  { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
+  // family
+  {
+    name: 'felix',
+    description: 'my brother\'s website',
+    url: 'https://felixmuensterer.com/',
+    aliases: ['brother', 'bro', 'fdp', 'lindner-junior', 'dumbass', '🤑']
+  },
+  {
+    name: 'lancemax',
+    url: 'https://lancemax.com/',
+    aliases: ['lance', 'lm']
+  },
+  { name: 'desyst', url: 'https://desyst.de/' },
+  {
+    name: 'farm',
+    url: 'http://beaver-river-oil-mill.com/',
+    description: 'the best flax oil you can buy!',
+    aliases: ['oil', 'grandma']
+  },
+  { name: 'linus', url: 'https://linus3d.de/', aliases: ['cousin'] },
+  {
+    name: 'wishlist',
+    url: 'https://www.amazon.de/hz/wishlist/ls/1Y2URDXEYY1JO',
+    aliases: ['wish', 'gift', 'birthday', '🎂', '🎁']
+  },
+  // About me
+  {
+    name: 'now',
+    description: 'A page with information about what I\'m up to at the moment',
+    aliases: ['currently', 'atm', 'doing', 'update'],
+    url: 'zettelkasten/now'
+  }, 
   { name: 'uses', description: 'a list of tech I use', url: 'zettelkasten/uses' }, // https://uses.tech/
+  { name: 'defaults', description: 'my app defaults', url: 'zettelkasten/defaults' }, // https://defaults.rknight.me/
   {
     name: 'stack',
     description: 'A list of tools and devices I use',
     url: 'https://stackshare.io/' + USERNAME_SHORT + '/my-stack',
     aliases: ['mystack', 'techstack']
   },
+  // Work
   {
     name: 'work',
     description: 'The website of the company I currently work at',
@@ -198,50 +231,43 @@ const redirects = [
     aliases: ['voe', 'vote', '🗳️']
   },
   {
-    name: 'telegram',
-    url: 'https://t.me/' + USERNAME_SHORT,
-    aliases: ['tg', 'tele', '📠', '💬']
-  },
-  {
-    name: 'bereal',
-    url: 'https://bere.al/' + USERNAME_SHORT,
-    aliases: ['real', '⏰']
-  },
-  {
     name: 'it-talents',
     description: 'an interview about a scholarship I received',
     url: 'https://it-talents.de/partnerunternehmen/dennis-erhaelt-ein-it-stipendium/',
     aliases: ['stipendium', 'interview', 'scholarship', '📰']
   },
   {
-    name: 'stickers',
-    description: 'my telegram sticker pack',
-    url: 'https://t.me/addstickers/memesterer'
-  },
-  {
     name: 'grepper',
     url: 'https://www.codegrepper.com/profile/dennis-muensterer',
     aliases: ['codegrepper', 'snippets']
   },
-  { name: 'lebenslauf', aliases: ['cv'] },
-  { name: 'readcv', url: 'https://read.cv/' + USERNAME_SHORT }, 
-  { name: 'life', aliases: ['timeline', '📅'] },
-  { name: 'help', aliases: ['?', 'available', 'urls', 'list', '🆘', '❔', '❓'] },
-  { name: 'statsfm', url: 'https://stats.fm/' + USERNAME, aliases: ['spotistats', '📊'] },
+  {
+    name: 'slides',
+    url: 'https://slides.com/' + USERNAME,
+    aliases: ['presentation', 'slide', 'present', '📈', '🪧']
+  },
+  // CV pages
   { name: 'resume', url: 'https://registry.jsonresume.org/' + USERNAME_SHORT, aliases: ['jsonresume'] },
+  { name: 'edit-resume', url: 'https://gist.github.com/dnnsmnstrr/548256752a08213eded1c5c90dbe7767/edit', aliases: ['resume.json'] }, //link to these redirects
   { name: 'github-resume', url: 'https://resume.github.io/?' + USERNAME_SHORT },
-  { name: 'masks', url: 'https://t.me/addstickers/maskerer' },
-  { name: 'discord', url: 'https://discord.gg/CrB72mXEzN' },
-  { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
+  { name: 'readcv', url: 'https://read.cv/' + USERNAME_SHORT }, 
+  { name: 'cv', url: 'https://cv-dennismuensterer.vercel.app/', descriptions: 'my cv as a next.js page', aliases: ['next-cv' }, 
+  { name: 'edit-cv', url: 'https://github.com/dnnsmnstrr/cv/blob/main/src/data/resume-data.tsx/', descriptions: 'my cv as a next.js page', aliases: ['next-cv' }, 
+  { name: 'life', aliases: ['timeline', '📅'] },
+  // meta
   { name: 'status', url: 'https://muensterer.betteruptime.com', aliases: ['monitor', 'betteruptime', '✅'] },
   { name: 'uptime', aliases: ['up', 'upptime']},
   { name: 'api', description: 'my personal API page', url: API_URL },
   { name: 'information', url: API_URL + '/api/dennis', description: 'information about me in JSON format', aliases: ['info', 'stats', 'personal-data', 'ℹ️', 'ℹ'] },
+  { name: 'edit-info', url: 'github/api/edit/master/pages/api/dennis.js', aliases: ['edit-information'] },
   { name: 'playlists', url: 'universe/playlists' }, //extend existing redirects
   { name: 'shuffle', url: 'random', aliases: ['feelinglucky', '🔀', '🎲']},
+  { name: 'google', url: 'https://www.google.com/search?q=Dennis+Muensterer' },
+  { name: 'admin', url: 'https://youareanidiot.cc/', aliases: ['idiot', 'troll'] },
   { name: 'insult', url: 'contact?Subject=Fuck%20You%21', aliases: ['hate', 'fu', '🖕', 'haters-gonna-hate'] }, //add query params
   { name: 'edit', url: 'github/dnnsmnstrr.github.io', aliases: ['✏️', '🖊️'] }, //shortcut to website repo
   { name: 'edit-redirects', url: 'github/api/edit/master/pages/api/redirect/redirects.js', aliases: ['↪️', '↩️', '🔃'] }, //link to these redirects
+  { name: 'help', aliases: ['?', 'available', 'urls', 'list', '🆘', '❔', '❓'] },
 ]
 
 const getRedirect = async (route = [], {noReturn, ...restParams} = {}) => {
