@@ -165,6 +165,7 @@ const redirects = [
     url: 'https://y.at/robot.laptop.phone.watch.headphone',
     aliases: ['emoji', '🤖💻📱⌚🎧']
   },
+  { name: 'vet', url: 'https://vet.domains/muensterer.vet', aliases: ['vechain'] },
   {
     name: 'stickers',
     description: 'my telegram sticker pack',
