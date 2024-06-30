@@ -21,6 +21,12 @@ const redirects = [
     aliases: ['home', 'main', 'root', 'landing', '🏠']
   },
   {
+    name: 'muenstererOS',
+    description: 'My new SvelteKit-based homepage',
+    url: 'https://muensterer.tech',
+    aliases: ['os', 'tech', 'svelte', 'sveltekit']
+  },
+  {
     name: 'contact',
     description: 'Send me an email',
     url: 'mailto:' + EMAIL,
@@ -50,9 +56,10 @@ const redirects = [
     aliases: ['i', 'ig', 'insta', 'gram', 'nofilter', 'pictures', 'photos', 'stories', '📷']
   },
   {
-    name: 'twitter',
-    url: 'https://twitter.com/' + USERNAME_SHORT,
-    aliases: ['t', 'tw', 'tweet', 'tweets', 'hashtag', '🐦']
+    name: 'x',
+    url: 'https://x.com/' + USERNAME_SHORT,
+    description: 'RIP twitter.com',
+    aliases: ['twitter', 't', 'tw', 'tweet', 'tweets', 'hashtag', '🐦']
   },
   {
     name: 'mastodon',
