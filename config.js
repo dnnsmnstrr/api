@@ -10,11 +10,11 @@ const USERNAME = 'dennismuensterer'
 const USERNAME_SHORT = USERNAME.replace(/[aeiou]/ig, '')
 const BIRTHDATE = '1997-06-16' //YYYY-MM-DD
 const EMAIL = USERNAME + '@gmail.com'
-const ALTERNATE_EMAILS = ['aol.com', 'icloud.com', 'dm@hpm.agency']
+const ALTERNATE_EMAILS = ['aol.com', 'icloud.com']
 
 // Domain
 const SECOND_LEVEL_DOMAIN = 'muensterer'
-const TOP_LEVEL_DOMAIN = 'lol'
+const TOP_LEVEL_DOMAIN = 'tech'
 const DEFAULT_URL = 'https://' + SECOND_LEVEL_DOMAIN + '.' + TOP_LEVEL_DOMAIN
 const API_URL = `https://${USERNAME_SHORT}.vercel.app`
 
